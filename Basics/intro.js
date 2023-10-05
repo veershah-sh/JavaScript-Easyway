@@ -5,3 +5,7 @@ var no = 10
 
 console.log(password)
 console.table([age, no])
+
+
+// let alert = require('alert'); 
+// alert("message")
