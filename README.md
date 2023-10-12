@@ -1,4 +1,7 @@
-# JavaScript-Easyway
-Learn JavaScript the easy way.
+# The Guru Code
 
-[ECMA Script Standards](https://tc39.es/ecma262/)
+Learn Computer Languages the easy way.
+
+- [JavaScript The Easy Way](./JavaScript/Readme.md)
+- [C Language The Easy Way](./C/Readme.md)
+- [C++ The Easy Way](./C++/Readme.md)
