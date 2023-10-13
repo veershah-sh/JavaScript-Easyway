@@ -35,6 +35,13 @@ void main() // main function
 }
 ```
 
+Compile & Run:
+```sh
+gcc <file_name>.c -o <output_file_name>.exe
+.\<output_file_name>.exe // windows
+./<output_file_name>.exe // linux / mac
+```
+
 ## Editors
 - [Codeblocks](http://www.codeblocks.org/)
 - [VS Code](https://code.visualstudio.com/)
@@ -48,3 +55,50 @@ void main() // main function
 - [Portable C Compiler](http://pcc.ludd.ltu.se/)
 - [Tiny C Compiler](https://bellard.org/tcc/)
 - for more refer to [SETUP GUIDE](../clang_setup.pdf)
+
+<hr>
+
+# Variables
+
+## Variables:
+    Local Storage for your code.
+
+### Syntax: 
+- Declare variable: 
+    ```data_type var_name;```
+
+- Define variable: 
+    ```
+    data_type var_name;
+    var_name = value;
+    ```
+    
+- Initialize variable:
+    ```data_type var_name = initial_value;```
+
+### Example:
+- Declare variable:
+    ```int marks;```
+
+- Define variable:
+    ```
+    int marks;
+    marks = 50;
+    ```
+- Initialize variable:
+    ```int marks = 0;```
+
+### Rules to name variable:
+1. Name must start with alphabet [a-z][A-Z] or underscror(_).
+2. Name do not start with number[0-9] or special characters(@!#$%&*-).
+3. Name do not include whitespace( ) or special characters(@!#$%&*-).
+4. Do not use reserved keywords.
+
+- Valid names:
+    myAge, my_age, _age, age_, age1
+- Invalid names:
+    1age, @age, #age, my age, int, if, for
+
+See this file for code. [Code](./variables.c)
+
+See more practice questions. [Practice](./variable_practice.c)
