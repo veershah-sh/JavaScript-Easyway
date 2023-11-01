@@ -1,0 +1,51 @@
+"""
+Write a program of an atm machine.
+
+1. withdraw money
+    - amount <= available balance
+    - amount >= 500 : failure message
+    - amount multiple of 500 : failure message
+2. deposit money
+    - amount >= 5000 : failure message
+    - amount multiple of 500 : failure message
+3. withdraw history
+    - show history
+4. deposit history
+    - show history
+5. account balance
+    - show available balance
+6. show account details
+    - user name
+    - phone number
+    - account number
+    - transaction history
+        - withdraw
+        - deposit
+    - available balance
+7. exit
+
+create a dictonary of users with following items:
+- user name
+- phone number
+- account no
+- account pin 
+- account history:
+    - withdraw history
+    - deposit history
+- account balance
+
+program flow:
+userid -> pin -> options -> transaction -> save data -> exit
+
+NOTE : create function for each option to perform this transaction
+
+
+User Name       Phone Number    Acc No.     PIN     User ID     Available Balance
+==========      =============   =======     ====    =======     ==================
+Mohan Roy       9685455263      968574      2363    MR74        250000
+Hari Patel      5896856985      568547      4658    HP47        150000
+Raju Shah       4585965856      325412      2552    RS12        100000
+Rita Soni       3256545566      568890      4444    RS90        500000
+Siya Patel      8899665577      663252      4224    SP52        550000
+
+"""
