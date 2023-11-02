@@ -54,14 +54,14 @@ function calculateCartPrice(val1,val2,...num1){ //... - rest
 
 // console.log(calculateCartPrice(200,5000,6777,6666,7654))
 
-// const user = {
-//     username: "veer",
-//     prices: 199
-// }
+const user = {
+    username: "veer",
+    price: 199
+}
 
-// function handleObject(anyobject){
-//     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
-// }
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
 
 // handleObject(user)
 // handleObject({
@@ -69,11 +69,16 @@ function calculateCartPrice(val1,val2,...num1){ //... - rest
 //     price: 399
 // })
 
-// const myNewArray = [200, 400, 100, 600]
+// handleObject({
+//     username:"nirmal",
+//     price: 444
+// })
 
-// function returnSecondValue(getArray){
-//     return getArray[1]
-// }
+const myNewArray = [200, 400, 100, 600]
 
-// console.log(returnSecondValue(myNewArray));
-// console.log(returnSecondValue([200, 400, 500, 1000]));
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 1400, 500, 1000]));
