@@ -3,16 +3,21 @@ let score = false
 // console.log(typeof score);
 // console.log(typeof(score));
 
-let valueInNumber = Number(score)
+// let valueInNumber = Number(score)
 // console.log(typeof valueInNumber);  // number
-// console.log(valueInNumber); //NaN
+// console.log(valueInNumber); // 0
 
-// if(typeof(valueInNumber) == "number"){
-//     if(valueInNumber == "NaN"){
+// "11" -> Number("11") -> 11
+// "1a" -> Number("1a") -> NaN
+
+let number = Number("11a")
+
+// if(typeof(number) == "number"){
+//     if(number == "NaN"){
 //         console.log("nan")
 //     }
 //     else{
-//         console.log(12 + valueInNumber)
+//         console.log(number)
 //     }
 // }
 
@@ -23,7 +28,8 @@ let valueInNumber = Number(score)
 let isLoggedIn = ""
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-//  console.log(booleanIsLoggedIn);
+// let booleanIsLoggedIn = Number(Boolean(isLoggedIn))
+console.log(booleanIsLoggedIn);
 
 // 1 => true; 0 => false
 // "" => false
