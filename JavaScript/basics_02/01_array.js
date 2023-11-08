@@ -39,8 +39,8 @@ console.log(myArr);
 // myArr.shift()
 // console.log(myArr);
 
-// console.log(myArr.includes("name1"));
-// console.log(myArr.indexOf("name1"));
+// console.log(myArr.includes("name1"));// boolean
+// console.log(myArr.indexOf("name1")); // check index of element
 
 const newArr = myArr.join()
 
