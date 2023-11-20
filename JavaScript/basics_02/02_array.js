@@ -16,7 +16,7 @@ const allHeros = marvel_heros.concat(dc_heros)
 // Spread Operator (...)
 let myNums = [0,1,2,3]
 const all_new_heros = [...marvel_heros, ...dc_heros, ...myNums]
-
+// ["thor", "Ironman", "spiderman", "superman", "flash", "batman", 0,1,2,3] 
 // console.log(all_new_heros);
 
 const another_array = 
