@@ -102,4 +102,39 @@ function newArrTotal(values){
 }
 
 let myArr = [14,125,14,12,47,88]
-console.log(newArrTotal(myArr))
+// console.log(newArrTotal(myArr))
+
+
+// ES6
+
+// arrow function
+// = () => {}
+
+// const test = (args) => {logic}
+
+const addNum = (n1, n2) => {
+    // console.log(n1+n2)
+
+    // explicit return
+    return n1+n2
+    // will not run after return
+    console.log("after return");
+}
+
+// addNum(11,12)
+// console.log(addNum(110,102))
+// console.log(addNum("veer ","shah"))
+
+let printName = (name) => (console.log(name))
+// printName("devanshu")
+// printName({myName: "veer"})
+
+// implicit return
+// const addTwo = (num1, num2) =>  (num1 + num2)
+const addTwo = (num1, num2) => (console.log(num1+num2), {a:1})
+
+// console.log(addTwo(10,12))
+
+// let nums = [1,2,3,4,5]
+
+// nums.forEach((num) => (console.log(num)))
