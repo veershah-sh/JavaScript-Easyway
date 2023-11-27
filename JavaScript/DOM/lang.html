@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="langList">
+        <li class="lang-item">Javascript</li>
+    </ul>
+
+    <script>
+        // add element
+        const list = document.querySelector(".langList")
+
+        // create element
+        const li = document.createElement("li")
+        li.setAttribute("id","lang2")
+        li.setAttribute("class","lang-item")
+        li.innerHTML = "Python"
+        li.style.color = 'orange'
+        list.appendChild(li)
+        // console.log(li);
+
+        const newLi = document.createElement("li")
+        let content = document.createTextNode("PHP")
+        newLi.appendChild(content)
+        list.appendChild(newLi)
+
+        // remove
+        const secondLang = document.querySelector("li:nth-child(2)")
+        secondLang.remove()
+        console.log(secondLang.textContent)
+
+
+    </script>
+</body>
+</html>
