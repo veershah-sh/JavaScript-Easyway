@@ -119,6 +119,33 @@ let clothFilter = cloth_items.filter((ci) => ci.size === "s")
 
 // console.log(clothFilter);
 
-let item1 = items.map((item) => {return item})
-            .filter((item) => item.type === "veg")
-console.log(item1)
+// let item1 = items.map((item) => {return item})
+//             .filter((item) => item.type === "veg")
+// console.log(item1)
+
+
+// reduce
+
+let total_amt = cloth_items.reduce((total, item) => {
+    return total+item.price
+},0)
+
+// total -> variable to store total
+// item -> each element of an array
+
+let totalAmount = cloth_items.reduce((total,item) => total+item.price ,0)
+
+console.log(totalAmount);
+
+// split bills
+
+let billM = cloth_items.filter((item) => item.fashion === "M")
+                    .reduce((totalM, item) => totalM+item.price, 0)
+
+console.log(billM);
+
+let billF = cloth_items.filter((item) => item.fashion === "F")
+                    .reduce((totalF, item) => totalF+item.price, 0)
+
+console.log(billF);
+console.log(billM+billF);
