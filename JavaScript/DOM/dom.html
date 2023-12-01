@@ -63,6 +63,18 @@
             item.style.color = "yellow";
             item.style.fontSize = "20px";
         })
+
+        // selects specific element
+        let logo = document.querySelector("#title")
+
+        logo.style.textAlign = "center"
+
+        // selects elements with same selector and returns NodeList
+        let liItems = document.querySelectorAll(".list-item")
+
+        liItems.forEach((li) => {
+            li.style = "color:orange;text-decoration:underline;font-weight:bold"
+        })
     </script>
 </body>
 </html>
