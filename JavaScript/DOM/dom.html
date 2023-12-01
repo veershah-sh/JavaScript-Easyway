@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Selectors</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">DOM Selectors <span style="display: none;">Hidden</span></h1>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Quibusdam aut vel maiores consequuntur commodi quas hic aperiam consequatur, perferendis eius, nihil minus, similique at natus.</p>
+
+        <ul class="list">
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+        <button class="btn-read-more">Read More</button>
+    </div>
+    <script>
+        // id selector
+        let title = document.getElementById("title")
+
+        // get contents
+        // to get the contents that are displayed on web page
+        console.log(title.innerText);
+
+        // to get the contents that are inside html tags
+        console.log(title.textContent);
+        
+        // to get inner html of an element
+        console.log(title.innerHTML);
+
+        // to get outer html of an element
+        console.log(title.outerHTML);
+
+        // manupulating content of an element
+        title.innerHTML = "Javascript | DOM"
+        // NOTE: we can do the same with innerText & textContent but not with outerHTML
+
+        // adding styles to an element
+
+        // we can add styles as out inline css
+        title.style = "color:orange;background-color:black";
+
+        // we can directly access css properties also
+        title.style.padding = "16px";
+
+
+        // class selector
+        let li = document.getElementsByClassName("list-item")
+        // here you will get an htmlCollection as an output 
+
+        // we can use it with index value
+        li[0].style.color = "red"
+
+        // or we can convert it to an array
+
+        let liArray = Array.from(li)
+        // now we can run all the methods that can be used with an array
+
+        liArray.forEach((item) => {
+            item.style.color = "yellow";
+            item.style.fontSize = "20px";
+        })
+    </script>
+</body>
+</html>
