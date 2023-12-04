@@ -8,9 +8,54 @@
 <body>
     <ul class="langList">
         <li class="lang-item">Javascript</li>
+        <li class="lang-item">Python</li>
+        <li class="lang-item">HTML</li>
+        <li class="lang-item">CSS</li>
+        <!-- <h1>test</h1> -->
     </ul>
 
+
     <script>
+        let parent = document.querySelector("ul")
+
+        // select child
+        // returns a HTMLCollection
+        console.log(parent.children)
+
+        // styling child
+        parent.children[1].style = "color:orange";
+
+        // loop through childrens
+        for(let i = 0; i<parent.children.length; i++){
+            console.log(parent.children[i].innerHTML);
+        }
+
+        // return first child object
+        console.log(parent.firstChild);
+
+        // return first child HTML
+        console.log(parent.firstElementChild);
+
+        // return last child object
+        console.log(parent.lastChild);
+
+        // return last child HTML
+        console.log(parent.lastElementChild); 
+
+        // returns next sibling
+        let first = parent.firstElementChild;
+        console.log(first.nextElementSibling);
+
+        // retuns number of nodes
+        console.log(parent.childNodes);
+
+        // access parent element from child
+        console.log(first.parentNode);
+        console.log(first.parentElement);
+
+    </script>
+    <!-- <script>
+
         // add element
         const list = document.querySelector(".langList")
 
@@ -34,6 +79,6 @@
         console.log(secondLang.textContent)
 
 
-    </script>
+    </script> -->
 </body>
 </html>
