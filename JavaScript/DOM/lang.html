@@ -53,9 +53,6 @@
         console.log(first.parentNode);
         console.log(first.parentElement);
 
-    </script>
-    <!-- <script>
-
         // add element
         const list = document.querySelector(".langList")
 
@@ -68,10 +65,14 @@
         list.appendChild(li)
         // console.log(li);
 
-        const newLi = document.createElement("li")
+        let newLi = document.createElement("li")
         let content = document.createTextNode("PHP")
         newLi.appendChild(content)
         list.appendChild(newLi)
+
+        //  edit 
+        let lastLang = parent.lastElementChild
+        lastLang.textContent = "Ruby"
 
         // remove
         const secondLang = document.querySelector("li:nth-child(2)")
@@ -79,6 +80,6 @@
         console.log(secondLang.textContent)
 
 
-    </script> -->
+    </script>
 </body>
 </html>
