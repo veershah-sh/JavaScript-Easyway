@@ -19,29 +19,38 @@
    </div>
 </body>
 <script>
-    document.getElementById('owl').onclick = function(){
-        alert("owl clicked")
-    }
-
-    document.querySelector("#prayer").onclick = function(){
-        alert("prayer clicked.")
-    }
-
-    document.querySelector("#japan").addEventListener('click', function(e){
-        alert("japan clicked.")
-        console.log(e);
-        console.log(e.target);
-    }, false)
-    // 3rd argument in addEventListner is for event propogation
-
-     // attachEvent() IE
+    // attachEvent() IE
     // jQuery - on
 
 
-    // type, timestamp, defaultPrevented
+    // type, timestamp, preventDefault
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // document.querySelector("#prayer").onclick = function(){
+    //     alert("prayer clicked.")
+    // }
+
+    // document.querySelector("#images").addEventListener('click', function(e){
+    //     console.log("clicked.");
+    // }, true)
+
+    // document.querySelector("#japan").addEventListener('click', function(e){
+    //     // alert("japan clicked.")
+    //     // console.log(e);
+    //     // console.log(e.target);
+    //     console.log("japan clicked.");
+    //     e.stopPropagation();
+    // }, true)
+
+    // 3rd argument in addEventListner is for event propogation
+
+    // =======================================================================
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
@@ -54,9 +63,20 @@
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
-    //     e.stopPropagation()
+    //     e.stopPropagation();
     //     console.log("google clicked");
     // }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e);
+        // console.log(e.target);
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.parentNode);
+            let element = e.target.parentNode
+            element.remove()
+        }
+    })
+
    
     
     // document.querySelector('#images').addEventListener('click', function(e){

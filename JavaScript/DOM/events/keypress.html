@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press</title>
+
+    <style>
+        .flex{
+            display: flex;
+            gap: 1em;
+        }
+        ul{
+            margin-top: 1em;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
+        li{
+            height: 50px;
+            width: 50px;
+            font-size: 18px;
+            border: 1px solid gray;
+            list-style: none;
+        }
+        .caps{
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Key Press</h1>
+    <input type="search" id="search-box" placeholder="Search here...">
+    <p class="caps">Caps Lock is ON</p>
+    <ul class="flex">
+        <li id="ctrl">ctrl</li>
+        <li id="alt">alt</li>
+        <li id="enter">enter</li>
+        <li id="shift">shift</li>
+        <li id="space">space</li>
+    </ul>
+    <script>
+        document.addEventListener("keypress", function(event) {
+            if (event.code == "Slash" || event.key === "/" || event.keyCode == 191) {
+                // alert('hi.');
+                document.querySelector("#search-box").focus();
+                // document.querySelector("#search-box").value = "";
+            }
+            // space key
+            else if(event.keyCode == 32){
+                document.getElementById("space").style = "color:blue";
+            }
+            // enter key
+            else if(event.keyCode == 13){
+                document.getElementById("enter").style = "color:red";
+            }
+            // shift key
+            else if(event.keyCode == 16){
+                document.getElementById("shift").style = "color:orange";
+            }
+            // caps lock on
+            else if(event.getModifierState("CapsLock")){
+                document.querySelector(".caps").style.display = "block";
+                // console.log(event.key);
+            }
+            // caps lock off
+            else if(!event.getModifierState("CapsLock")){
+                document.querySelector(".caps").style.display = "none";
+                // console.log(event.key);
+            }
+        });
+    </script>
+</body>
+</html>
