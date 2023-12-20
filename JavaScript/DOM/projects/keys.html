@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Key Code</title>
+</head>
+<body>
+    <h1>Get Key Code</h1>
+    <!-- <div id="insert"></div> -->
+
+    <div id="key">0</div>
+    <div id="key-code">0</div>
+    <div id="code">0</div>
+
+    <script>
+        let key = document.getElementById('key');
+        let key_code = document.getElementById('key-code');
+        let code = document.getElementById('code');
+
+        let onPress = (event) => {
+            key.innerHTML = `${event.key === " " ? "Space" : event.key}`;
+            key_code.innerHTML = `${event.keyCode}`;
+            code.innerHTML = `${event.code}`;
+        }
+        window.addEventListener('keydown', onPress)
+    </script>
+
+    <!-- <script>
+        const insert = document.getElementById('insert');
+        window.addEventListener('keydown', (e) => {
+        insert.innerHTML = `
+            <div class='color'>
+            <table border='1'>
+            <tr>
+            <th>Key</th>
+            <th>Keycode</th> 
+            <th>Code</th>
+            </tr>
+            <tr>
+            <td>${e.key === ' ' ? 'Space' : e.key}</td>
+            <td>${e.keyCode}</td> 
+            <td>${e.code}</td>
+            </tr>
+            
+        </table>
+            </div>
+        `;
+        });
+    </script> -->
+</body>
+</html>

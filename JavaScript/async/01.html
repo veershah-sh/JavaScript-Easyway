@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Async JS</h1>
+    <div id="pop-up"></div>
+    <button id="login">Login</button>
+
+    <script>
+        // give time in miliseconds
+        let popup = setTimeout(function(){
+            // console.log('veer here');
+            document.getElementById("pop-up").innerHTML = "<a href='#'>Login Here</a>";
+        }, 2000)
+
+        let btn = document.getElementById('login');
+        
+        function stopPopUp(){
+            clearTimeout(popup)
+        }
+        btn.addEventListener("click", stopPopUp)
+    </script>
+</body>
+</html>
