@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>Async JS</h1>
+    <div id="pop-up"></div>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        let start = document.getElementById('start')
+        let stop = document.getElementById('stop')
+        let ping
+        function startPing(){
+            ping = setInterval((str) => {
+                console.log(`hii ${Date.now()} ${str}`);
+            }, 2000, "Veer")
+        }
+
+        function stopPing(){
+            clearInterval(ping)
+        }
+
+        start.addEventListener('click', startPing)
+        stop.addEventListener('click', stopPing)
+
+    </script>
+</body>
+</html>
