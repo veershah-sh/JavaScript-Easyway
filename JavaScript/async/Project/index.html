@@ -47,5 +47,43 @@
             </div>
         </div>
     </div>
+
+    <script>
+        let profile = document.querySelector(".profile");
+        let username = document.querySelector(".username");
+        let bio = document.querySelector(".bio");
+        let followers = document.querySelector(".followers");
+        let repo = document.querySelector(".repo-count");
+        let twitter = document.querySelector(".twitter-icon");
+        let website = document.querySelector(".website-icon");
+        let visitProfile = document.querySelector(".btn-visit-profile");
+
+        const URL = "https://api.github.com/users/veershah-sh";
+
+        let xhr = new XMLHttpRequest()
+
+        xhr.open('GET', URL)
+        xhr.onreadystatechange = function(){
+            // console.log(xhr.readyState);
+            if(xhr.readyState === xhr.DONE){
+                // console.log(this.responseText)
+                const data = JSON.parse(this.responseText)
+                profile.src = data.avatar_url
+                username.innerHTML = data.login
+                bio.innerHTML = data.bio
+                followers.innerHTML = `${data.followers} Followers`
+                repo.innerHTML = `${data.public_repos} Repositories`
+
+                let twitterURL = `https://twitter.com/${data.twitter_username}`
+                let websiteURL = `https://${data.blog}`
+
+                twitter.href = twitterURL
+                website.setAttribute("href", websiteURL)
+                visitProfile.setAttribute("href", data.html_url)
+            }
+        }
+        
+        xhr.send()
+    </script>
 </body>
 </html>

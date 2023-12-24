@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <input type="search" name="search"  id="search" placeholder="Search City...">
+    <button id="btn-search">Search</button>
+
+    <script>
+        let search = document.getElementById("search").value
+        let btnSearch = document.getElementById("btn-search")
+
+        const xhr = new XMLHttpRequest()
+        const APIKey = "5f1c4d277a3f50d35bae1c6dcf007932"
+        const query = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${APIKey}`
+        // https://api.openweathermap.org/data/2.5/weather?q=london&appid=5f1c4d277a3f50d35bae1c6dcf007932
+
+        function getWeather(){
+            
+        }
+
+        btnSearch.addEventListener('click', getWeather)
+
+    </script>
+</body>
+</html>
