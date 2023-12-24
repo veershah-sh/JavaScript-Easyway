@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmlHTTPRequest</title>
+</head>
+<body>
+    <h1>xmlHTTPRequest</h1>
+
+    <script>
+        const URL = 'https://api.github.com/users/veershah-sh';
+
+        // 0 | UNSENT | Client has been created. open() not called yet.
+        let xhr = new XMLHttpRequest()
+        // console.log("UNSENT", xhr.readyState);
+
+        // 1 | OPENED | open() has been called.
+        // GET POST PUT DELETE
+        xhr.open('GET', URL)
+        console.log("OPENED", xhr.readyState);
+
+        // 2 | HEADERS_RECEIVED | send() has been called, and headers and status are available.
+        // 3 | LOADING | Downloading; responseText holds partial data.
+        // xhr.onprogress = () => {
+        //     console.log("LOADING", xhr.readyState);
+        // }
+
+        // 4 | DONE | The operation is complete.
+        // xhr.onload = function(){
+        //     console.log("DONE", xhr.readyState)
+        // }
+        
+        // tracking xhr states
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+
+            // if(xhr.readyState === 4){
+            if(xhr.readyState === xhr.DONE){
+                let data = JSON.parse(this.responseText)
+                console.log(typeof(data))
+                console.log(data.name)
+            }
+        }
+
+        xhr.send()
+    </script>
+</body>
+</html>
