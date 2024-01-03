@@ -43,7 +43,12 @@ console.log(BackOffice.giveUpdates);
 // mordern way
 Object.setPrototypeOf(Coder, employee)
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log(Coder.name, Coder.role);
 =======
 console.log(Coder.name, Coder.role);
 >>>>>>> 6aca3f2 (oop more)
+=======
+console.log(Coder.name, Coder.role); 
+
+>>>>>>> 446b9e9 (more oop)

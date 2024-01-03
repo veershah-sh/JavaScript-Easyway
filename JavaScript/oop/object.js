@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function multiplyBy2(num){
 <<<<<<< HEAD
   return num*2
@@ -60,3 +61,5 @@ console.log(laptop)
   console.log(mobile)
   console.log(laptop)
 >>>>>>> 6aca3f2 (oop more)
+=======
+>>>>>>> 446b9e9 (more oop)
