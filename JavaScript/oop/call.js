@@ -10,4 +10,8 @@ function createUser(username, email, password){
 }
 
 let veer = new createUser("veer", "veer@google.com", "123")
+<<<<<<< HEAD
 console.log(veer)
+=======
+console.log(veer)
+>>>>>>> 6aca3f2 (oop more)

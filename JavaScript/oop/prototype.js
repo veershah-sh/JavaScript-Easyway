@@ -42,4 +42,8 @@ console.log(BackOffice.giveUpdates);
 
 // mordern way
 Object.setPrototypeOf(Coder, employee)
+<<<<<<< HEAD
 console.log(Coder.name, Coder.role);
+=======
+console.log(Coder.name, Coder.role);
+>>>>>>> 6aca3f2 (oop more)
