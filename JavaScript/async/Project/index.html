@@ -17,6 +17,8 @@
     </style>
 </head>
 <body>
+    <input type="text" name="gituser" id="gituser" placeholder="name">
+    <button id="submit">Submit</button>
     <div class="card">
         <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
             <img src="https://source.unsplash.com/150x150/?portrait?3" alt="" class="profile w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
@@ -57,8 +59,12 @@
         let twitter = document.querySelector(".twitter-icon");
         let website = document.querySelector(".website-icon");
         let visitProfile = document.querySelector(".btn-visit-profile");
-
-        const URL = "https://api.github.com/users/veershah-sh";
+        let sub = document.getElementById("submit")
+        sub.addEventListener('click', function(){
+            let gituser = document.getElementById("gituser").value
+        
+        // let gituser = "sumit1232"
+        const URL = `https://api.github.com/users/${gituser}`;
 
         let xhr = new XMLHttpRequest()
 
@@ -84,6 +90,7 @@
         }
         
         xhr.send()
+    })
     </script>
 </body>
 </html>
